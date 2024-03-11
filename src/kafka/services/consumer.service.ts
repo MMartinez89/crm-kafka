@@ -24,9 +24,9 @@ export class ConsumerService {
 
     await consumer.run(config);
 
-    console.log('-------------------', consumer);
-
     this.consumers.push(consumer);
+
+    //console.log('------------------- aqui-----------', consumer);
   }
 
   async OnApplicationShutdown() {

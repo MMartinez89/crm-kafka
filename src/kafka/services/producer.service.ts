@@ -4,7 +4,6 @@ import {
   OnModuleInit,
 } from '@nestjs/common';
 import { Kafka, Producer, ProducerRecord } from 'kafkajs';
-import { readFileSync } from 'fs';
 
 @Injectable()
 export class ProducerService implements OnModuleInit, OnApplicationShutdown {
@@ -32,7 +31,7 @@ export class ProducerService implements OnModuleInit, OnApplicationShutdown {
   }
 
   async produce(record: ProducerRecord) {
-    console.log('Producer', record.messages);
+    //console.log('----------------Producer------------------', record.messages);
     this.producer.send(record);
   }
 

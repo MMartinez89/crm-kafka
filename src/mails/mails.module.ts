@@ -12,6 +12,7 @@ import { KafkaModule } from 'src/kafka/kafka.module';
     KafkaModule,
     MailerModule.forRootAsync({
       useFactory: async (config: ConfigService) => ({
+        //transport: 'smtps://user@domain.com:pass@smtp.domain.com',
         transport: {
           host: config.get('MAIL_HOST'),
           secure: false,

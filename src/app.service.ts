@@ -23,7 +23,7 @@ export class AppService {
 
   async getHello() {
     await this.producerService.produce({
-      topic: 'test',
+      topic: 'salida',
       messages: [
         {
           value: 'Hello world',

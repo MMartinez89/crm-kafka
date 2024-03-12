@@ -11,9 +11,9 @@ export class TestConsumer implements OnModuleInit {
   ) {}
 
   async onModuleInit() {
-    let user;
+    let user: User;
     await this.consumerService.consume(
-      { topics: ['test'] },
+      { topics: ['salida'] },
       /* {
         eachMessage: async ({ partition, topic, message }) => {
           console.log({
@@ -31,7 +31,5 @@ export class TestConsumer implements OnModuleInit {
         },
       },
     );
-    console.log(user);
-    //return this.mailService.senMessage(user.name, user.email);
   }
 }

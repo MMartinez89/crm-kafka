@@ -10,14 +10,14 @@ export class MailsService {
   ) {}
 
   async senMessage(user: string, email: string) {
-    const message = 'Prueba';
+    //const message = 'Prueba';
     await this.mailerService.sendMail({
-      to: email,
+      to: 'manuelmartinezc7@gmail.com',
       subject: `Probando aplicacion`,
       template: './welcome',
       context: {
         name: user,
-        message: message,
+        message: email,
       },
     });
   }

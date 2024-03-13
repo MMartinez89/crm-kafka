@@ -14,19 +14,23 @@ export class TestConsumer implements OnModuleInit {
     let user: User;
     await this.consumerService.consume(
       { topics: ['salida'] },
-      /* {
+      /*  {
         eachMessage: async ({ partition, topic, message }) => {
           console.log({
             value: message.value.toString(),
             topic: topic.toString(),
             partition: partition.toString(),
           });
-          user = JSON.parse(message.value.toString());
+         // user = JSON.parse(message.value.toString());
         },
       }, */
       {
         eachMessage: async ({ message }) => {
+          console.log({
+            value: message,
+          });
           user = JSON.parse(message.value.toString());
+          console.log(user);
           return this.mailService.senMessage(user.name, user.email);
         },
       },

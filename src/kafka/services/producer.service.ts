@@ -34,7 +34,6 @@ export class ProducerService implements OnModuleInit, OnApplicationShutdown {
   }
 
   async produce(record: ProducerRecord) {
-    //console.log('----------------Producer------------------', record.messages);
     this.producer.send(record);
   }
 

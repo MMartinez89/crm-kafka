@@ -13,7 +13,7 @@ export class AppService {
   async createUser(user: User) {
     try {
       console.log('user created');
-      await this.mailsService.senMessage(user.name, user.email);
+      await this.mailsService.senMessage(user);
       return { message: 'email sended' };
     } catch (error) {
       console.log('---------------', error.message);

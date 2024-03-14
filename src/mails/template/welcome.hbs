@@ -1,46 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Correo Electrónico de Ejemplo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #3498db;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px;
-    }
-    section {
-      padding: 20px;
-    }
-    footer {
-      background-color: #f2f2f2;
-      padding: 10px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinación de Cita de Ventas</title>
 </head>
 <body>
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h1 style="text-align: center; color: #333;">Coordinación de Cita de Ventas de Automóviles</h1>
+        <p>Accesor de ventas XXX,</p>
+        
+        <p>Es un placer saludarte.
+           Quisiera informarte sobre un potencial cliente que hemos identificado y que podría ser una excelente oportunidad de venta para nosotros.</p>
 
-  <header>
-    <h1>¡Toyota!</h1>
-  </header>
+        <p>El cliente {{name}} {{lastname}} está interesado en adquirir un automóvil y expresó un interés particular en conocer más detalles sobre el vehículo 
+          {{model}}. Su intencion es {{modality}}</p>
 
-  <section>
-    <p>Hola {{name}},</p>
-    <p>Te enviamos un posible comprador su corrreo electronico es <span>{{message}}</span></p>
-  </section>
+        <p>Nos complace informarte que hemos logrado coordinar una reunión con este cliente para el día y hora {{date}}.
+           Esta es una gran oportunidad para presentar nuestras opciones de vehículos y proporcionar la información detallada 
+           que el cliente está buscando.</p>
 
-  <footer>
-    <p>© 2024 Tu Compañía. Todos los derechos reservados.</p>
-  </footer>
+        <p>Por favor, asegúrate de estar preparado para esta reunión y de tener toda la información relevante sobre el vehículo {{model}} disponible 
+          para discutirla con el cliente. Esta reunión representa una excelente oportunidad para cerrar una venta exitosa y 
+          satisfacer las necesidades del cliente.</p>
 
+        <p>Gracias por tu atención y esfuerzo en este asunto. Esperamos resultados positivos de esta reunión.</p>
+
+        <p>Por cualquier cambio puede comunicarse con el cliente al correo <span>{{email}}</span></p>  
+
+    </div>
 </body>
 </html>

@@ -22,15 +22,17 @@ export class MailsService {
   ) {
     //const message = 'Prueba';
     const { name, lastname, email, date, city, model, modality } = user;
+    const hora = new Date(date).toLocaleTimeString();
     await this.mailerService.sendMail({
       to: 'manuelmartinezc7@gmail.com',
-      subject: `Probando aplicacion`,
+      subject: `Posible venta`,
       template: './welcome',
       context: {
         name: name,
         lastname: lastname,
         email: email,
-        date: date,
+        date: new Date(date).toLocaleDateString(),
+        hora: hora,
         city: city,
         model: model,
         modality: modality,

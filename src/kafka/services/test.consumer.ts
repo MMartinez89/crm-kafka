@@ -30,12 +30,6 @@ export class TestConsumer implements OnModuleInit {
             value: message,
           });
           user = JSON.parse(message.value.toString());
-          console.log(user.name);
-          console.log(user.lastname);
-          console.log(user.email);
-          console.log(user.modality);
-          console.log(user.model);
-          console.log(user.date);
           return this.mailService.senMessage(user);
         },
       },

@@ -17,6 +17,18 @@ export class ConsumerService {
 
     await consumer.subscribe(topic);
     await consumer.run(config);
+    /* await consumer.run({
+      autoCommit: false,
+      eachMessage: async ({ message }) => {
+        console.log('offset: ' + message.offset);
+        const obj = JSON.parse(message.value);
+        console.log(obj);
+        console.log(obj.email);
+        if (obj.model == 'Ford Ranger') {
+          throw new Error('modelo prohibido' + obj.model);
+        }
+      },
+    }); */
 
     this.consumers.push(consumer);
   }
